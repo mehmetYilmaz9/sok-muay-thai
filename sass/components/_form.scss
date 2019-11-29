@@ -1,0 +1,39 @@
+
+.form {
+    width: 60%;
+    margin: auto;
+    padding: 2rem;
+    background-color: $color-grey-light-2;
+}
+
+.form-size {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.form-control {
+    width: 60px;
+}
+
+.form-size-error {
+    width: 70%;
+    margin: auto;
+}
+
+@include respond(tab-port) {
+    .form {
+        width: 100%;
+        padding: 2rem ;
+        margin: auto;
+        
+    }
+}
+
+@include respond(land-port) {
+    .form {
+        width: 100%;
+        padding: 2rem ;
+        margin: auto;
+        
+    }
+}

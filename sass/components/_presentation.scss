@@ -1,0 +1,61 @@
+/******STORIES****/
+.story {
+   margin: 0 auto;   
+   width: 100%;
+
+   display: flex;
+   
+}
+
+.story__text {
+   font-size: 18px;
+   max-width: 60%;
+   margin: 0 4rem 0 0;
+   
+}
+.story__shape {
+   width: 15rem;
+   height: 15rem;
+}
+
+.presentation-img {
+   max-width: 30%;
+}
+
+.img-presentation {
+   height: 100%;
+   width: 100%;
+}
+
+ 
+@media only screen and (max-width: 600px) {
+
+   ///annule le flex en responsive
+   .story {
+     display: list-item ;
+     // margin-right: auto;
+      margin-left: 3rem;  
+      width: 100%;
+      
+   }
+
+   .presentation-img{
+      
+      padding: auto;
+      width: 100%;
+      //margin-right: 0;
+
+   }
+
+   .story__shape {
+      width: 15rem;
+      height: 15rem;
+       
+   }
+
+   .story__text {
+      padding: auto;
+      width: 100%;
+      
+      }
+}

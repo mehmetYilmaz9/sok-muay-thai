@@ -1,0 +1,147 @@
+.card {
+    perspective: 150rem;
+    //-webkit-perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 40rem;
+
+    &__side {
+    height: 50rem;
+    transition: all 3s ease;
+    font-size: 16px; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    //page for safari 
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+    &--front {
+        background-color: $color-white;
+    }
+
+    }
+   
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+       
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, 
+            rgba(138, 138, 138, 0.897),
+            rgba(0, 0, 0, 0.8)),
+            url(../img/back-club3.jpeg);
+
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, 
+            rgba(138, 138, 138, 0.897),
+            rgba(0, 0, 0, 0.8)),
+            url(../img/portrait.jpeg);
+           
+            
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, 
+            rgba(138, 138, 138, 0.897),
+            rgba(0, 0, 0, 0.8)),
+            url(../img/card1.jpeg);
+        }
+
+        &--4 {
+            background-image: linear-gradient(to right bottom, 
+            rgba(138, 138, 138, 0.897),
+            rgba(0, 0, 0, 0.8)),
+            url(../img/background-card2copie.jpeg);
+        }
+    }
+    
+    &__heading {
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: $color-white;
+        position: absolute;
+        top: 19rem;
+        right: 1rem;
+        width: 75%;
+    }
+
+    &__heading-span {
+       padding : .5rem .5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, 
+            rgba(218, 210, 210, 0.918),
+            rgba(170, 161, 161, 0.8)); 
+        }
+        
+    }
+
+
+    &__details {
+
+        padding: 2rem;
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 17px;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+            }
+        }
+    }
+
+    //Front side styling (back of section Card)
+
+    @include respond(tab-port) {
+      
+        height: auto;
+        border-radius: 3px;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        margin: 1rem 0;
+
+
+        &__side {
+            height: auto; 
+            position: relative;
+            box-shadow: none;
+        
+        &--back {
+                //-webkit-transform: rotateY(180deg);
+                transform: rotateY(0deg);
+                clip-path: polygon(0 15%, 100% 0, 100% 100, 0% 100%);
+                //-webkit-clip-path: polygon(0 15%, 100% 0, 100% 100, 0% 100%);
+            }
+        }
+
+        &__details {
+            padding: 1rem 3rem;
+        }
+       
+    }
+}
